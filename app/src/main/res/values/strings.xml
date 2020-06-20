@@ -10,4 +10,24 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="household">Household</string>
+    <string name="login">Log in</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="enter_email">Your email</string>
+    <string name="enter_password">Your password</string>
+    <string name="chores_fragment_label">Chores</string>
+    <string name="Household_fragment_label">Household</string>
+    <string name="chores">Chores</string>
+    <string name="name">Your full name</string>
+    <string name="household_name">Household $%s</string>
+    <string name="members">Members</string>
+    <string name="title_add_chore">Add a new chore</string>
+    <string name="title">Title</string>
+    <string name="save">save</string>
+    <string name="title_add_household">Add household</string>
+    <string name="name_household">Household name</string>
+    <string name="no_household">Not a member of a household, create one or ask someone to invite you!</string>
+    <string name="trivia_title">Trivia of total finished chores!</string>
+    <string name="recurrence">$% x every week</string>
+    <string name="total_finished_chores">Total finished chores: $</string>
 </resources>

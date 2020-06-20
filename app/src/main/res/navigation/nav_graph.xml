@@ -7,21 +7,21 @@
 
     <fragment
         android:id="@+id/ChoresFragment"
-        android:name="com.example.mychores.ChoresFragment"
+        android:name="com.example.mychores.ui.chores.ChoresFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_chores"
         />
 
     <fragment
         android:id="@+id/HouseholdFragment"
-        android:name="com.example.mychores.HouseholdFragment"
+        android:name="com.example.mychores.ui.household.HouseholdFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_household"/>
 
 
 <!--    <fragment-->
 <!--        android:id="@+id/FirstFragment"-->
-<!--        android:name="com.example.mychores.ChoresFragment"-->
+<!--        android:name="com.example.mychores.ui.chores.ChoresFragment"-->
 <!--        android:label="@string/first_fragment_label"-->
 <!--        tools:layout="@layout/fragment_chores">-->
 
@@ -31,7 +31,7 @@
 <!--    </fragment>-->
 <!--    <fragment-->
 <!--        android:id="@+id/SecondFragment"-->
-<!--        android:name="com.example.mychores.HouseholdFragment"-->
+<!--        android:name="com.example.mychores.ui.household.HouseholdFragment"-->
 <!--        android:label="@string/second_fragment_label"-->
 <!--        tools:layout="@layout/fragment_household">-->
 

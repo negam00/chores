@@ -1,6 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.mychores.MainActivity">
+    tools:context="com.example.mychores.ui.main.MainActivity">
 
     <item
         android:id="@+id/ChoresFragment"

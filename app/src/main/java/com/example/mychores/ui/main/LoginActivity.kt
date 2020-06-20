@@ -34,7 +34,9 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun startSignUpActivity() {
-        TODO("Not yet implemented")
+        val intent = Intent(this, SignUpActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 
     private fun showMainActivity() {

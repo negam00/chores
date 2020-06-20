@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyChores</string>
+    <string name="app_name">My Chores</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">Chores fragment</string>

@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "614438967297",
+    "firebase_url": "https://chores-b94e1.firebaseio.com",
+    "project_id": "chores-b94e1",
+    "storage_bucket": "chores-b94e1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:614438967297:android:e8d39cf2bfe25de8660800",
+        "android_client_info": {
+          "package_name": "com.example.chores"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "614438967297-6cpoljolln33d872rodqlule77f0ljlv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAc02DSLmIB6xWSzHOaw8MWlyEbKb9fSaw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "614438967297-6cpoljolln33d872rodqlule77f0ljlv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:614438967297:android:583e7e47969e2865660800",
+        "android_client_info": {
+          "package_name": "com.example.mychores"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "614438967297-6cpoljolln33d872rodqlule77f0ljlv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAc02DSLmIB6xWSzHOaw8MWlyEbKb9fSaw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "614438967297-6cpoljolln33d872rodqlule77f0ljlv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

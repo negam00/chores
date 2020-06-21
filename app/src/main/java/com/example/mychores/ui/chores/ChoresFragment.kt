@@ -41,6 +41,7 @@ class ChoresFragment : Fragment() {
 
     private fun initViews() {
         rvChores.adapter = choresAdapter
+        rvChores.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
         fab.setOnClickListener { addChoreOnClicked() }
         createItemTouchHelper().attachToRecyclerView(rvChores)
     }

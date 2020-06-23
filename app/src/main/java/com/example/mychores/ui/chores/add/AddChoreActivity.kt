@@ -4,12 +4,15 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.activity.viewModels
 import com.example.mychores.R
 import com.example.mychores.model.Chore
+import com.example.mychores.ui.chores.ChoreViewModel
 import com.example.mychores.ui.main.MainActivity
 import kotlinx.android.synthetic.main.activity_add_chore.*
 
 class AddChoreActivity : AppCompatActivity() {
+    private val viewModel: ChoreViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +31,7 @@ class AddChoreActivity : AppCompatActivity() {
                     choreDescription = etChoreDescription.text.toString(),
                     recurrence = etChoreRecurrence.text.toString().toInt()
                 )
-                // todo actually add chore
+                viewModel.insertChore(newChore)
                 Toast.makeText(this, "Chore was added!", Toast.LENGTH_SHORT).show()
                 returnToChoresFragment()
             } else Toast.makeText(this, "Please fill in all fields!", Toast.LENGTH_SHORT).show()

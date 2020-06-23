@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -14,7 +16,6 @@ import com.example.mychores.R
 import com.example.mychores.model.Chore
 import com.example.mychores.ui.chores.add.AddChoreActivity
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.content_main.*
 import kotlinx.android.synthetic.main.fragment_chores.*
 
 /**
@@ -24,6 +25,8 @@ class ChoresFragment : Fragment() {
     private val chores = mutableListOf<Chore>()
     private val choresAdapter = ChoresAdapter(chores)
     private val dialog by lazy { MaterialDialog(requireActivity()) }
+    private val viewModel: ChoreViewModel by viewModels()
+    private lateinit var triviaText: String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,12 +40,25 @@ class ChoresFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         initViews()
+        observeViewModel()
+    }
+
+    private fun observeViewModel() {
+        viewModel.getChores.observe(viewLifecycleOwner, Observer {
+            chores.clear()
+            chores.addAll(it)
+            choresAdapter.notifyDataSetChanged()
+        })
+
+        viewModel.trivia.observe(viewLifecycleOwner, Observer {
+            triviaText = it.text
+        })
     }
 
     private fun initViews() {
         rvChores.adapter = choresAdapter
         rvChores.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
-        fab.setOnClickListener { addChoreOnClicked() }
+        fabChores.setOnClickListener { addChoreOnClicked() }
         createItemTouchHelper().attachToRecyclerView(rvChores)
     }
 
@@ -65,7 +81,8 @@ class ChoresFragment : Fragment() {
 
                     chores.remove(choreToUse)
                     choresAdapter.notifyDataSetChanged()
-                    // update firebase with finished chore
+                    //todo update firebase with finished chore
+
                     showTriviaDialog()
                 } else {
                     Snackbar.make(
@@ -82,7 +99,7 @@ class ChoresFragment : Fragment() {
     private fun showTriviaDialog() {
         //todo change to total finished
 
-        dialog.title(R.string.trivia_title).message(1, "triviaText")
+        dialog.title(R.string.trivia_title).message(1, triviaText)
         dialog.positiveButton { dialog.dismiss() }
         dialog.show()
     }

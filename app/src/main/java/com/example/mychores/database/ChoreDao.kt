@@ -22,7 +22,4 @@ interface ChoreDao {
 
     @Delete
     suspend fun deleteChore(chore: Chore)
-
-    @Query("SELECT * FROM user_table WHERE userId= :userId")
-    fun getUser(userId: String)
 }
